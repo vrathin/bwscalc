@@ -1,6 +1,7 @@
 package org.bws.calc;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import org.bws.calc.exception.ParseException;
 import org.bws.calc.expression.Expression;
@@ -8,9 +9,9 @@ import org.bws.calc.expression.ValueExpression;
 import org.bws.calc.tokens.OpToken;
 import org.bws.calc.tokens.Token;
 
-public class SimpleParser implements Parsable{
+public class SimpleParser implements Parser{
 
-	public Expression parse(ArrayList<Token> tokens){	
+	public Expression parse(List<Token> tokens){	
 		if(tokens.size() == 1){
 			Token t = tokens.get(0);
 			try{

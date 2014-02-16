@@ -11,13 +11,13 @@ import org.junit.Test;
 public class CalculatorTest {
 
 	Tokenizable t;
-	Parsable p;
+	Parser p;
 	Calculator c;
 	
 	@Before
 	public void setup(){
 		t = new BasicTokenizable();
-		p = new SimpleParser();
+		p = new SuccessParser();
 		c = new Calculator(t, p);		
 		
 	}
@@ -70,6 +70,12 @@ public class CalculatorTest {
 		int result = c.evaluate("(1-1)+(1+1)" );
 		Assert.assertEquals(2,result);
 
+	}
+	
+	@Test
+	public void evaluateThreeOperatorWithNoParens(){
+	        int result = c.evaluate("5-2+1");
+	        Assert.assertEquals(4,result);
 	}
 
 	@Test(expected=ParseException.class)

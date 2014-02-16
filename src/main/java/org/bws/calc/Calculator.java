@@ -9,9 +9,9 @@ import org.bws.calc.tokens.Token;
 public class Calculator{
 	
 	private Tokenizable tokenizer;
-	private Parsable parser;
+	private Parser parser;
 	
-	public Calculator(Tokenizable t, Parsable p){
+	public Calculator(Tokenizable t, Parser p){
 		this.tokenizer=t;
 		this.parser = p;
 	}
