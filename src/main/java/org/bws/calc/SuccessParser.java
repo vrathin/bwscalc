@@ -18,8 +18,6 @@ import org.bws.calc.tokens.Token;
  * VALUE_EXPRESSION = number
  * PARENTHESIZED_EXPRESSION = "(" EXPRESSION ")"
  * 
- * 
- * @author Brian
  *
  */
 public class SuccessParser implements Parser{
