@@ -1,2 +1,11 @@
 bwscalc
 =======
+
+Basic Numeric Expression Parser for the following grammar:
+
+ * EXPRESSION = BINARY_EXPRESSION | TERM
+ * BINARY_EXPRESSION = EXPRESSION "+"/"-" TERM
+ * TERM = VALUE_EXPRESSION |
+ *     PARENTHESIZED_EXPRESSION
+ * VALUE_EXPRESSION = number
+ * PARENTHESIZED_EXPRESSION = "(" EXPRESSION ")"
